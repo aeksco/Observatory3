@@ -12,15 +12,14 @@ import path from 'path';
 export default function(app) {
 
   // Insert routes below
-  app.use('/api/achievements', require('./api/achievement'));
-  app.use('/api/posts', require('./api/post'));
+  app.use('/api/posts', require('./api/post')); // TODO - remove posts
   app.use('/api/projects', require('./api/project'));
-  app.use('/api/commits', require('./api/commit'));
+  app.use('/api/commits', require('./api/commit')); // TODO - remove commits
   app.use('/api/users', require('./api/user'));
   app.use('/api/classyear', require('./api/classyear'));
   app.use('/api/smallgroup', require('./api/smallgroup'));
   app.use('/api/attendance', require('./api/attendance'));
-  app.use('/api/static', require('./api/static'));
+  app.use('/api/static', require('./api/static')); // TODO - remove static
   app.use('/uploads', express.static(config.imageUploadPath));
   app.use('/auth', require('./auth'));
 
